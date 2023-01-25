@@ -1,3 +1,5 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 <i> Title </i>: Dataset Distillation: A Comprehensive Review <a href="https://arxiv.org/pdf/2301.07014.pdf"> Token-level Adaptive Training for Neural Machine Translation </a> (IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE 2023) <br>
 
 <i>Author </i>: Ruonan Yu, Songhua Liu,  Xinchao Wang <br>
