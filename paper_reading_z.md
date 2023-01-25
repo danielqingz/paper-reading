@@ -1,5 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
 <i> Title </i>: Dataset Distillation: A Comprehensive Review <a href="https://arxiv.org/pdf/2301.07014.pdf"> Token-level Adaptive Training for Neural Machine Translation </a> (IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE 2023) <br>
 
 <i>Author </i>: Ruonan Yu, Songhua Liu,  Xinchao Wang <br>
@@ -22,10 +20,12 @@
 * Method
 
     DD 做法：1）初始化生成的数据 $S$，randomly生成from Gaussion Noise；randomly从原始数据 $T$ 里sample；用Core-set方法sample。2）找一个model $M$ 优化目标函数，$L$ 是某种objective，在loop里 $M$ 和 $S$ 交替更新直到收敛，获得最终的 $S$。
-
+    
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">
     $$
         S = \argmin_{S}L(S,T)
     $$
+    </script>
 
     主流的 $L$ 有三种：1）Performance Matching，2）Parameter Matching，3）Distribution Matching
 
