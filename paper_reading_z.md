@@ -37,6 +37,6 @@ $$
 
 ## Discussion
 
-Computational cost仍然是个问题
+Computational cost仍然是个问题，有一系列工作已经在做了；Scaling up问题，在大数据集上难做，需要更高的compression rate；不同的生成模型生成能力不同，performance不同；目前只在分类任务有；安全、隐私问题
 
-By Jiaqing Zhang
+01/25/2023 By Jiaqing Zhang
