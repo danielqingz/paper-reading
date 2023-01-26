@@ -21,9 +21,15 @@ DICOM: Digital Imaging and Communications in Medicine
     - 评判标准： 选了五十个data element来测试是否de-identify成功，50个一般是最低要求
 
 * Results
-  只有两个免费工具可以在default的情况下完成比较高的de-identify：CTP和DICOM Library，最后大概讨论了下免费工具的可用性一类的。
+
+
+    只有两个免费工具可以在default的情况下完成比较高的de-identify：CTP和DICOM Library，最后大概讨论了下免费工具的可用性一类的。
  * Discussion
-  这边文章其实主要是看下前半部分，了解下DICOM文件的结构、用途和如何处理，包括一些处理标准参考，其实工具包选择方面一般是仁者见仁智者见智了。
+
+
+    这边文章其实主要是看下前半部分，了解下DICOM文件的结构、用途和如何处理，包括一些处理标准参考，其实工具包选择方面一般是仁者见仁智者见智了。
+  
+  
   
   1/25/2023 Ziqian Huang
   
