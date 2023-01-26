@@ -1,4 +1,4 @@
-<i> Title </i>: Dataset Distillation: A Comprehensive Review <a href="https://arxiv.org/pdf/2301.07014.pdf"> Token-level Adaptive Training for Neural Machine Translation </a> (IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE 2023) <br>
+<i> Title </i>: <a href="https://arxiv.org/pdf/2301.07014.pdf"> Dataset Distillation: A Comprehensive Review  </a> (IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE 2023) <br>
 
 <i>Author </i>: Ruonan Yu, Songhua Liu,  Xinchao Wang <br>
 
@@ -39,3 +39,37 @@
     Computational cost仍然是个问题，有一系列工作已经在做了；Scaling up问题，在大数据集上难做，需要更高的compression rate；不同的生成模型生成能力不同，performance不同；目前只在分类任务有；安全、隐私问题
 
 01/25/2023 By Jiaqing Zhang
+
+<br>
+
+----
+
+<br>
+
+<i> Title </i>: <a href="https://openaccess.thecvf.com/content_CVPRW_2019/papers/Weakly%20Supervised%20Learning%20for%20Real-World%20Computer%20Vision%20Applications/Xu_Missing_Labels_in_Object_Detection_CVPRW_2019_paper.pdf"> Missing Labels in Object Detection </a> (CVPR 2019) <br>
+
+<i>Author </i>: Mengmeng Xu, Yancheng Bai,  Bernard Ghanem <br>
+
+<i>Comments </i>:
+
+* Background
+
+    OB任务中，数据未必完美，会存在一些missing labels，比如一张图片有三只羊，但bbox只圈出了其中一只，这样的数据对于训练肯定是有影响的。作者的实验也证明如此
+
+* Method
+
+    先用一个weakly supervised od model作为teacher model，生成pseudo labels，然后把这些labels和已存在的annotations合并，然后再训练supervised od model。一旦detector的效果提升了，就会更新一遍pseudo labels，让他们更好。
+
+    
+
+* Discussion
+
+    有点儿像知识蒸馏，用weakly supervised model的原因我觉得是因为相对supervised model，生成的结果更general，不会被限制住。做法不算难感觉比较有效，但是citation并不多，而且这个数据还有both image-， instance- level的labels，可能这个任务会比较简单。
+
+01/26/2023 By Jiaqing Zhang
+
+<br>
+
+----
+
+<br>
