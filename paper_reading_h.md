@@ -1,15 +1,13 @@
-<i>Title</i>: <a href="[https://link.springer.com/content/pdf/10.1007/s00330-015-3794-0.pdf]">Free DICOM de-identification tools in clinical research functioning and safety of patient pravicy</a> (European Radiology 2015) <br>
+<i>Title</i>: <a href="https://link.springer.com/content/pdf/10.1007/s00330-015-3794-0.pdf">Free DICOM de-identification tools in clinical research functioning and safety of patient pravicy</a> (European Radiology 2015) <br>
 
 <i>Author</i>: K.Y.E. Aryanto, M. Oudkerk, P.M.A. van Ooijen<br>
 <i>Keywords</i>: DICOM Freeware Tools, Patient Data Privacy, Anoymisation and Pseudonymisation, Data Protection, Anonymous Testing
 
 <i>Comments</i>: 
 
-01/25/2023 by Ziqian Huang
-
 DICOM: Digital Imaging and Communications in Medicine
 
-* Why we need to de-identify DICOM in clinical research
+* Background
 
 
     在临床研究里为了保护被采集数据的患者隐私，一般要做de-identification来去除病人的 personal health information(PHI) or protected health information，人口统计信息（性别，年龄，种族，教育水平等），过往病史，用药记录，生化检查档案，精神状况检查等一些可以判断病人身份的信息。DICOM就是在医学图像里用来储存，交换这些信息的，包括图像信息+meta-data elements，但同时也可能使信息被泄露。
@@ -33,3 +31,17 @@ DICOM: Digital Imaging and Communications in Medicine
   
   1/25/2023 Ziqian Huang
   
+<br>
+
+----
+
+<br>
+
+<i>Title</i>: <a href="https://arxiv.org/pdf/1710.09412.pdf">mixup: Beyond Empirical Risk Minimization</a> (European Radiology 2015) <br>
+
+<i>Author</i>: Hongyi Zhang, Moustapha Cisse, Yann N. Dauphin, David Lopez-Paz<br>
+
+<i>Comments</i>: 
+
+01/25/2023 by Ziqian Huang
+今天续上 uwu
