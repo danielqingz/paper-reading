@@ -73,3 +73,36 @@
 ----
 
 <br>
+
+
+<i> Title </i>: <a href="https://www.sciencedirect.com/science/article/pii/S1361841521001080"> A survey on active learning and human-in-the-loop deep learning for medical image analysis </a> (Medical Image Analysis 2021) <br>
+
+<i>Author </i>: Samuel Budd, Emma C. Robinson,  Bernhard Kainz <br>
+
+<i>Comments </i>:
+
+Human-in-the-loop的应用：1）Active Learning，2）Interaction with model outputs，人类参与prediction
+
+* AL
+    
+    AL首先要考虑选哪种Query，有1）Stream-based Selective Sampling，cost低但是效果一般不好，2）Membership Query Synthesis，生成模型认为最有information的data-point，GAN在这方面表现不错，3）Pool-based Sampling，在没标注的池子里measure informativeness，然后rank，然后选出最有信息的
+
+    AL其次要考虑怎么Evaluating informativeness，1）Uncertainty，2）Representativeness，3）GAN，4）[Learning active learning]()，用一个regression model学selection策略，Rl也可以用在AL里
+
+    AL最后要考虑是Fine-tuning还是retraining
+
+* Interactive refinement
+
+    预测之后，人类来修改，然后在tune model
+
+* Practical considerations
+
+    Noisy oracles，大锅label，就是说让大众来label，数量多但是质量差
+
+    弱监督学习，加入image-level的label
+
+    Multi-task learning
+
+    Annotation interface
+
+这篇表面上是讲Human-in-the-loop的，实际上介绍了一大堆别的东西，虽然拉的很长，但是有用的信息还是不少的
