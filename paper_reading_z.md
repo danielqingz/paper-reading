@@ -106,3 +106,11 @@ Human-in-the-loop的应用：1）Active Learning，2）Interaction with model ou
     Annotation interface
 
 这篇表面上是讲Human-in-the-loop的，实际上介绍了一大堆别的东西，虽然拉的很长，但是有用的信息还是不少的
+
+01/31/2023 By Jiaqing Zhang
+
+<br>
+
+----
+
+<br>
