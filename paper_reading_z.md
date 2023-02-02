@@ -114,3 +114,38 @@ Human-in-the-loop的应用：1）Active Learning，2）Interaction with model ou
 ----
 
 <br>
+
+<i> Title </i>: <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Konyushkova_Learning_Intelligent_Dialogs_CVPR_2018_paper.pdf"> Learning Intelligent Dialogs for Bounding Box Annotation </a> (CVPR 2021) <br>
+
+<i>Author </i>: Ksenia Konyushkova, Vittorio Ferrari <br>
+
+<i>Comments </i>:
+
+* 做了啥
+
+    训练agent to自动选择一系列动作（一共就俩：box verification，manual box drawing），使人类完成标注bbox。两种agent，一种预测box被准确verified概率，一种RL model。agent可以自适应模型的难度，提出高效的strategy，比上文俩单独的动作快，detector越强agent越牛。
+
+* 怎么做
+
+    * 方法1
+
+        train一个分类器，预测这个box能不能被接受，预测的probability sort一下，然后跟$\frac{t_V}{t_D}$比较，其中$t_V$是指box verification的时间，$t_D$是指manual box drawing的时间，如果set里没有acceoted的，就直接人工标。
+
+        怎么证明这个合理呢？他们提出了一个Theorem：如果给定acceptance的概率，strategy of动作sequence可以minimizeannotation时间，然后数学+逻辑推导了一下
+    * 方法2
+
+        RL的方法，reward是the negative time required for the chosenaction。
+
+    还实验证明了，提升detector的performance，效果变的更好了
+
+* 锐评一下
+
+    肯定是google在做大规模bbox标注的时候想的点子，其实就是把box verification的工作进一步变高级了一点by加入agent来指定训练策略，想法不难，用IoU做标准
+
+02/02/2023 By Jiaqing Zhang
+
+<br>
+
+----
+
+<br>
