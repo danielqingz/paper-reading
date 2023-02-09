@@ -149,3 +149,43 @@ Human-in-the-loop的应用：1）Active Learning，2）Interaction with model ou
 ----
 
 <br>
+
+<i> Title </i>: <a href="https://arxiv.org/abs/1810.01943"> AI Fairness 360: An Extensible Toolkit for Detecting, Understanding, and Mitigating Unwanted Algorithmic Bias </a> (Arxiv 2018) <br>
+
+<i>Author </i>: Rachel K. E. Bellamy, Yunfeng Zhang <br>
+
+<i>Comments </i>:
+
+* 背景
+
+    Fairness一直是AI中的一个重要话题，在关心model performance的同时，也不得不考虑robustness和fairness。
+
+* 功能
+
+    * Metrics
+
+        * 计算Disparate impact和statisticalparity difference，分别是ratio和差值
+    
+    * Algorithms
+
+        * Mitigating bias：
+
+            * Reweighing（训练的时候加sample weights，简单粗暴），Optimized preprocessing， Learning fair representations，Disparate impact remover。分别来自于四篇工作
+
+            * Adversarial debiasing，Prejudice remove
+
+            * Equalized odds postprocessing（用一个模型学结果），Calibrated equalized odds post-processing（用一个模型学结果），Reject option classification（调整confiddence band）
+
+* 评论
+
+    集成了Fairness相关的各种个样东西，还是很好用的，但是fairness这个问题本身还没有引起过多的关注，目前这个tool有500多引。我觉得是因为大家都focus on主赛道，很多general的问题不涉及fairness，但是在医学，涉及到人类的问题上就很matters，我认为以后这个会更被重视！
+
+
+02/09/2023 By Jiaqing Zhang
+
+<br>
+
+----
+
+<br>
+
