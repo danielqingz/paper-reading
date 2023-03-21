@@ -174,7 +174,7 @@ Human-in-the-loop的应用：1）Active Learning，2）Interaction with model ou
 
             * Adversarial debiasing，Prejudice remove
 
-            * Equalized odds postprocessing（用一个模型学结果），Calibrated equalized odds post-processing（用一个模型学结果），Reject option classification（调整confiddence band）
+            * Equalized odds postprocessing（用一个模型学结果），Calibrated equalized odds post-processing（用一个模型学结果），Reject option classification（调整confiddence band
 
 * 评论
 
@@ -189,3 +189,39 @@ Human-in-the-loop的应用：1）Active Learning，2）Interaction with model ou
 
 <br>
 
+<i> Title </i>: <a href="https://www.nature.com/articles/s41746-019-0087-z"> A computer vision system for deep learning-based detection of patient mobilization activities in the ICU </a> (npj Digital Medicine 2019) <br>
+
+<i>Author </i>: Serena Yeung, Fei-fei Li <br>
+
+<i>Comments </i>:
+
+* 背景
+
+    在保护privacy的情况下，监测ICU里病人的mobility
+
+* 结果
+
+    * setup
+
+        * 预测4种动作："get out of bed", "get in bed", "get out of chair", "get in chair" 
+
+        * 用renet预测mobility和duration，真的假的我去；用yolov2预测有没有人
+
+    * Performance
+
+        * Specificity，Sensitivity 正好是这个classes顺序的降序
+
+        * AUC 有 97.6 到 90.5 这么高
+
+* 评论
+
+    但是这工作只在一个icu固定机位做的，而且切分数据的时候没有按照病人ID来分，可能存在data leakage，而且他们的depth camera效果也一般，必竟19年的作品。但是他们的数据确实比较优质，四个class分布也比较平均，不过他们的数据和code都不公开；我们的工作情况更复杂，depth image效果更好，包含信息更多
+
+
+03/21/2023 By Jiaqing Zhang
+
+<br>
+
+----
+
+<br>
