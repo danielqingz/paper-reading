@@ -225,3 +225,30 @@ Human-in-the-loop的应用：1）Active Learning，2）Interaction with model ou
 ----
 
 <br>
+
+<i> Title </i>: <a href="https://arxiv.org/pdf/2112.00969.pdf"> Object-Centric Unsupervised Image Captioning </a> (ECCV 2022) <br>
+
+<i>Author </i>: Zihang Meng, Ser-Nam Lim <br>
+
+<i>Comments </i>:
+
+* 背景
+
+    标注数据很昂贵，所以用unsupervised方法
+
+* 方法
+
+    * 从句子中提取名词，从图片中提取OB的features加上location info，然后map这俩的CE loss，需要object的名字能跟captions里的名词对的上
+
+    * 引入了object relationships and attributes，证明很有效，原因他说“The flexibility of a transformer architecture means that we can also include additional information as input together with the object information.”，确实如此，因为transformer的输入是seq信息，很灵活
+
+    * 加了多语言字幕的生成，看起来像翻译来的，大概是凑contribution吧
+
+
+03/21/2023 By Jiaqing Zhang
+
+<br>
+
+----
+
+<br>
