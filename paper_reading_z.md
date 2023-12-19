@@ -252,3 +252,37 @@ Human-in-the-loop的应用：1）Active Learning，2）Interaction with model ou
 ----
 
 <br>
+
+<i> Title </i>: <a href="https://arxiv.org/abs/2305.05665"> IMAGEBIND: One Embedding Space To Bind Them All </a> (meta 2023) <br>
+
+<i>Author </i>: Zihang Meng, Ser-Nam Lim <br>
+
+<i>Comments </i>:
+
+* 介绍
+
+    6种modalities的东西不需要各种combined paired的embeding，只需要借助image-paired data就可以bind各种modality。
+    具体来说，用各种模态+image的pair（image-text描述，image-depth，video-audio, image-thermal data, video-IMU）
+
+* Method
+
+    数据是aligned pair（image+其他modality），并用两个deep networks分别encode image/video $I_i$ （vision transformer $f()$） 和 其他modality $M_i$ （transformer $g()$）as $q_i=f(I_i)$ and $k_i=g(M_i)$。这俩用InfoNCE loss来optimize
+    $$
+    \mathcal{L}_{\text{InfoNCE}} = -\log \frac{\exp(q_i^Tk_i/\tau)}{\exp(q_i^Tk_i/\tau)+\sum_{j\neq i}exp(q_i^Tk_j/\tau)}
+    $$
+
+    具体来看
+    - For video+audio (from the Audioset dataset): clip 2 sec of both and convert the 2 sec audio sampled 24 16kHz into spectrograms (2D signal just like image) using 128 mel-spectrogram bins <- ViT-B
+    - For image+thermal/depth (from the LLVIP dataset/the SUN RGB-D dataset): just treat them as 1D images. And, convert depth into disparity maps for scale invariance <- ViT-S
+    - For IMU signal (from the Ego4D dataset): use accelerometer + gyroscope value recorded across the X, Y , and Z axes. 5 sec clips (2K time steps) IMU data are projected uisng a 1D convolution with a kernel size of 8. Then the output is encoded by a Tranformer
+    - For image+text (from large-scale web data): the same design as [CLIP](https://arxiv.org/abs/2103.00020) <- OpenCLIP (vision (ViT-H 630M params) and text encoders (302M params))
+
+    A modality-specific linear projection head is added on each encoder to obtain a fixed size d dimensional embedding, which is normalized and used in the InfoNCE loss
+
+12/18/2023 By Jiaqing Zhang
+
+<br>
+
+----
+
+<br>
